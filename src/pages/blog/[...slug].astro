@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const post = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 ---
 
 <BaseLayout title={`${post.data.title} | yyyyang`} description={post.data.description}>
@@ -47,6 +47,22 @@ const { Content } = await render(post);
       <p class="eyebrow">Article</p>
       <h3>关于这篇内容</h3>
       <p>{post.data.description}</p>
+      {
+        headings.length > 0 && (
+          <div class="toc-block">
+            <p class="eyebrow">Contents</p>
+            <ul class="toc-list">
+              {headings
+                .filter((heading) => heading.depth <= 3)
+                .map((heading) => (
+                  <li class={`toc-item toc-depth-${heading.depth}`}>
+                    <a href={`#${heading.slug}`}>{heading.text}</a>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        )
+      }
       <a class="text-link" href="/blog/">回到博客列表</a>
     </aside>
   </section>
