@@ -1,5 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const recentPosts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -10,6 +16,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="hero-grid hero-grid-home">
       <div class="hero-copy hero-copy-home">
         <p class="eyebrow">Personal Site / Notes / Projects</p>
+        <div class="intro-pill">Independent site for profile, writing and projects</div>
         <h1>一个更稳定、更像自己的个人主页。</h1>
         <p class="lead">
           这里是 yyyyang 的公开入口。个人介绍、项目、博客和阶段性积累，会在这里被整理成更清晰、更稳定、也更有个人气质的内容结构。
@@ -119,6 +126,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <strong>GitHub</strong>
         <span>查看项目与代码仓库</span>
       </a>
+    </div>
+  </section>
+
+  <section class="panel panel-clean">
+    <div class="section-heading">
+      <p class="eyebrow">Recent Writing</p>
+      <h2>让首页直接带出最新内容，而不是只停留在自我介绍。</h2>
+    </div>
+    <div class="blog-feed">
+      {
+        recentPosts.map((post) => (
+          <article class="blog-card blog-card-feature">
+            <p class="meta">{post.data.pubDate.toISOString().slice(0, 10)}</p>
+            <h3>
+              <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+            </h3>
+            <p>{post.data.description}</p>
+            <a class="text-link" href={`/blog/${post.id}/`}>阅读全文</a>
+          </article>
+        ))
+      }
     </div>
   </section>
 </BaseLayout>

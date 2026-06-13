@@ -42,14 +42,17 @@ const posts = (await getCollection("blog"))
     </div>
     <div class="blog-feed">
       {
-        posts.map((post) => (
-          <article class="blog-card blog-card-feature">
+        posts.map((post, index) => (
+          <article class={`blog-card blog-card-feature ${index === 0 ? "blog-card-primary" : ""}`}>
             <p class="meta">{post.data.pubDate.toISOString().slice(0, 10)}</p>
             <h3>
               <a href={`/blog/${post.id}/`}>{post.data.title}</a>
             </h3>
             <p>{post.data.description}</p>
-            <a class="text-link" href={`/blog/${post.id}/`}>阅读全文</a>
+            <div class="blog-card-footer">
+              <span class="chip">Post</span>
+              <a class="text-link" href={`/blog/${post.id}/`}>阅读全文</a>
+            </div>
           </article>
         ))
       }
