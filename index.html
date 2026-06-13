@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self</title>
+    <meta
+      name="description"
+      content="一个用于展示个人介绍、项目和写作的 GitHub Pages 站点。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div class="brand">SELF</div>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#writing">Writing</a>
+            <a href="https://github.com/gengafdafd">GitHub</a>
+          </div>
+        </nav>
+
+        <div class="hero-copy">
+          <p class="eyebrow">GitHub Pages / Personal Site</p>
+          <h1>把这个仓库建成你的公开名片和作品入口。</h1>
+          <p class="lead">
+            先从一页式站点开始，承载你的简介、项目、联系方式和内容更新，后续再逐步扩展成博客或作品集。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">看项目结构</a>
+            <a class="button button-secondary" href="https://github.com/gengafdafd/self"
+              >看仓库</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="panel" id="about">
+          <div class="section-heading">
+            <p class="eyebrow">About</p>
+            <h2>这页现在适合放什么</h2>
+          </div>
+          <div class="grid two-up">
+            <article class="card">
+              <h3>一句话介绍</h3>
+              <p>
+                你是谁，在做什么，希望别人通过这个站点认识你什么。这部分通常决定访客会不会继续往下看。
+              </p>
+            </article>
+            <article class="card">
+              <h3>当前重点</h3>
+              <p>
+                正在做的项目、关注的方向、提供的能力。把站点当作你的定位页，而不是纯资料堆积页。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel accent" id="projects">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2>建议先做 3 个清晰栏目</h2>
+          </div>
+          <div class="grid three-up">
+            <article class="card feature">
+              <span class="tag">01</span>
+              <h3>代表项目</h3>
+              <p>列 2 到 4 个最能代表你能力的项目，每个项目只写目标、结果、链接。</p>
+            </article>
+            <article class="card feature">
+              <span class="tag">02</span>
+              <h3>写作沉淀</h3>
+              <p>把技术文章、复盘、学习笔记聚合起来，逐步形成长期积累。</p>
+            </article>
+            <article class="card feature">
+              <span class="tag">03</span>
+              <h3>联系方式</h3>
+              <p>GitHub、邮箱、X、即刻、微信入口。让别人能在 10 秒内找到你。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel" id="writing">
+          <div class="section-heading">
+            <p class="eyebrow">Writing</p>
+            <h2>后续扩展路线</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <span>Phase 1</span>
+              <h3>一页式主页</h3>
+              <p>先把身份、项目、链接放完整，保证页面能上线、能访问、能代表你。</p>
+            </article>
+            <article class="timeline-item">
+              <span>Phase 2</span>
+              <h3>内容模块化</h3>
+              <p>把项目卡片、文章列表、个人简介拆成可维护的数据结构或独立页面。</p>
+            </article>
+            <article class="timeline-item">
+              <span>Phase 3</span>
+              <h3>博客与 SEO</h3>
+              <p>接入 Markdown 博客、Open Graph、站点地图和访问统计。</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Hosted on GitHub Pages.</p>
+        <p><span id="year"></span> gengafdafd / self</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
