@@ -160,17 +160,47 @@ const recentPosts = (await getCollection("blog"))
     </div>
     <div class="blog-feed">
       {
-        recentPosts.map((post) => (
-          <article class="blog-card blog-card-feature">
+        recentPosts.map((post, index) => (
+          <article class={`blog-card blog-card-feature ${index === 0 ? "blog-card-primary" : ""}`}>
+            <div class="blog-cover">
+              <span class="chip">Writing</span>
+            </div>
             <p class="meta">{post.data.pubDate.toISOString().slice(0, 10)}</p>
             <h3>
               <a href={`/blog/${post.id}/`}>{post.data.title}</a>
             </h3>
             <p>{post.data.description}</p>
-            <a class="text-link" href={`/blog/${post.id}/`}>阅读全文</a>
+            <div class="blog-card-footer">
+              <span class="chip">Latest</span>
+              <a class="text-link" href={`/blog/${post.id}/`}>阅读全文</a>
+            </div>
           </article>
         ))
       }
+    </div>
+  </section>
+
+  <section class="panel accent">
+    <div class="section-heading">
+      <p class="eyebrow">Projects</p>
+      <h2>除了写作，主页也要留下项目型内容入口。</h2>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card">
+        <span class="tag">Site</span>
+        <h3>个人站点建设</h3>
+        <p>围绕 GitHub Pages、Astro、内容结构和视觉风格，把这个站点逐步做成一个长期可维护的个人空间。</p>
+      </article>
+      <article class="project-card">
+        <span class="tag">Writing</span>
+        <h3>博客系统与持续更新</h3>
+        <p>博客部分已经从 Markdown 文件展示切到真正的静态站页面，后续重点是扩展内容和专题。</p>
+      </article>
+      <article class="project-card">
+        <span class="tag">Identity</span>
+        <h3>个人品牌表达</h3>
+        <p>通过统一的 logo、导航、主页和博客，慢慢建立稳定的个人识别方式。</p>
+      </article>
     </div>
   </section>
 

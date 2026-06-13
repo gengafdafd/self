@@ -44,6 +44,9 @@ const posts = (await getCollection("blog"))
       {
         posts.map((post, index) => (
           <article class={`blog-card blog-card-feature ${index === 0 ? "blog-card-primary" : ""}`}>
+            <div class="blog-cover">
+              <span class="chip">Post</span>
+            </div>
             <p class="meta">{post.data.pubDate.toISOString().slice(0, 10)}</p>
             <h3>
               <a href={`/blog/${post.id}/`}>{post.data.title}</a>
