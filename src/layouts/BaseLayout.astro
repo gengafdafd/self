@@ -1,0 +1,38 @@
+---
+const { title = "yyyyang", description = "yyyyang 的个人主页与博客入口。" } =
+  Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <a class="brand" href="/">YYYYANG.CN</a>
+          <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/blog/">Blog</a>
+            <a href="/docs/">Docs</a>
+            <a href="https://github.com/gengafdafd">GitHub</a>
+          </div>
+        </nav>
+        <slot name="hero" />
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer class="footer">
+        <p>Hosted on GitHub Pages.</p>
+        <p>{new Date().getFullYear()} yyyyang.cn</p>
+      </footer>
+    </div>
+  </body>
+</html>

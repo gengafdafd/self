@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout
+  title="yyyyang | Blog"
+  description="yyyyang 的博客列表，包含文章、笔记、复盘和长期思考。"
+>
+  <Fragment slot="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Blog / Writing</p>
+        <h1>把文章变成真正的页面，而不是 Markdown 文件列表。</h1>
+        <p class="lead">
+          博客现在已经切到静态站框架，后续文章会从 Markdown 自动生成页面，访问路径保持稳定清晰。
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/">返回主页</a>
+          <a class="button button-secondary" href="/docs/blog/">查看博客规范</a>
+        </div>
+      </div>
+
+      <aside class="hero-note">
+        <p class="eyebrow">Writing Flow</p>
+        <h2>写 Markdown，站点自动生成 HTML。</h2>
+        <p>后续你只需要新增文章文件，博客列表和详情页都会自动渲染出来。</p>
+      </aside>
+    </div>
+  </Fragment>
+
+  <section class="panel">
+    <div class="section-heading">
+      <p class="eyebrow">Posts</p>
+      <h2>最新文章</h2>
+    </div>
+    <div class="blog-list">
+      {
+        posts.map((post) => (
+          <article class="blog-card">
+            <p class="meta">{post.data.pubDate.toISOString().slice(0, 10)}</p>
+            <h3>
+              <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+            </h3>
+            <p>{post.data.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

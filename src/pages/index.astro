@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="yyyyang | Personal Site"
+  description="yyyyang 的个人主页，展示个人介绍、方向、项目入口和长期积累。"
+>
+  <Fragment slot="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Personal Site / Independent Corner</p>
+        <h1>一个更像自己的主页，而不是默认模板。</h1>
+        <p class="lead">
+          我是 yyyyang。这里会承载个人介绍、项目、写作和长期积累，用更清晰的结构把个人主页和博客拆开。
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/blog/">进入博客</a>
+          <a class="button button-secondary" href="/docs/about/personal-profile/">查看个人介绍</a>
+        </div>
+      </div>
+
+      <aside class="hero-note">
+        <p class="eyebrow">Current Direction</p>
+        <h2>先把气质做出来，再慢慢填满内容。</h2>
+        <p>
+          当前站点会保留两个明确入口：一个是个人主页，一个是博客。文档继续按规范归档，展示层尽量简洁、克制、长期耐看。
+        </p>
+      </aside>
+    </div>
+  </Fragment>
+
+  <section class="panel">
+    <div class="section-heading">
+      <p class="eyebrow">Profile</p>
+      <h2>个人主页保持克制，重点只留最核心的信息。</h2>
+    </div>
+    <div class="grid two-up">
+      <article class="card">
+        <p class="quote-mark">01</p>
+        <h3>一句话定位</h3>
+        <p>用一个稳定的站点，把个人介绍、项目、写作和长期积累沉淀下来，形成自己的公开入口。</p>
+      </article>
+      <article class="card">
+        <p class="quote-mark">02</p>
+        <h3>当前状态</h3>
+        <p>正在把域名、视觉风格、文档目录和内容结构打稳，后续会把项目和博客持续补全。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel accent">
+    <div class="section-heading">
+      <p class="eyebrow">Site Map</p>
+      <h2>站点后续按两条主线发展</h2>
+    </div>
+    <div class="grid split-grid">
+      <article class="card">
+        <span class="tag">Home</span>
+        <h3>个人主页</h3>
+        <p>承载个人介绍、当前在做的事、对外链接和重点项目，偏展示和定位。</p>
+      </article>
+      <article class="card">
+        <span class="tag">Blog</span>
+        <h3>博客</h3>
+        <p>承载文章、笔记、复盘和长期思考，偏内容沉淀和连续更新。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="section-heading">
+      <p class="eyebrow">Core Links</p>
+      <h2>对外入口保持少而清楚</h2>
+    </div>
+    <div class="contact-links">
+      <a class="contact-link" href="/docs/about/personal-profile/">
+        <strong>个人介绍</strong>
+        <span>统一维护对外介绍版本</span>
+      </a>
+      <a class="contact-link" href="/docs/">
+        <strong>文档目录</strong>
+        <span>后续所有文档按规范归档</span>
+      </a>
+      <a class="contact-link" href="https://github.com/gengafdafd">
+        <strong>GitHub</strong>
+        <span>项目与代码入口</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

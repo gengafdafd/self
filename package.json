@@ -1,0 +1,29 @@
+{
+  "name": "self",
+  "version": "1.0.0",
+  "description": "这是一个 GitHub Pages 个人站点仓库，当前用于承载主页、个人介绍和文档目录。",
+  "private": true,
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gengafdafd/self.git"
+  },
+  "keywords": [],
+  "author": "lothar_yyyy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gengafdafd/self/issues"
+  },
+  "homepage": "https://github.com/gengafdafd/self#readme",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^6.4.6"
+  }
+}
