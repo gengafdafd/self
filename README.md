@@ -1,16 +1,39 @@
 # self
 
-这是一个 GitHub Pages 项目页仓库，建议发布为：
+这是一个 GitHub Pages 个人站点仓库，当前用于承载主页、个人介绍和文档目录。
+
+默认 GitHub Pages 地址：
 
 `https://gengafdafd.github.io/self/`
 
-## 当前初始化内容
+自定义域名：
+
+`https://www.yyyyang.cn/`
+
+## 当前结构
 
 - 纯静态单页站点
 - `index.html` 作为主页
 - `styles.css` 负责视觉样式
 - `script.js` 放轻量交互
 - GitHub Actions 自动部署到 Pages
+- 根目录 `CNAME` 用于 GitHub Pages 自定义域名
+- 文档统一归档到 `docs/`
+
+## 文档目录
+
+- `docs/README.md`：文档分类规范
+- `docs/about/`：个人介绍与对外资料
+- `docs/guides/`：配置与操作说明
+- `docs/plans/`：站点规划
+- `docs/projects/`：项目资料
+- `docs/notes/`：零散笔记
+
+当前已创建：
+
+- `docs/about/personal-profile.md`
+- `docs/guides/custom-domain-and-https.md`
+- `docs/plans/site-roadmap.md`
 
 ## 如何启用 GitHub Pages
 
@@ -19,25 +42,12 @@
 3. 在 `Build and deployment` 中选择 `GitHub Actions`
 4. 推送到 `main` 分支后会自动部署
 
-## 建设建议
+## 内容维护原则
 
-### 第一阶段
-
-- 改标题、简介、链接为你自己的内容
-- 增加项目卡片和联系方式
-- 保持一页式，先上线
-
-### 第二阶段
-
-- 增加 `projects/` 或 `posts/` 页面
-- 把项目和文章改成数据化维护
-- 补 `404.html`、社交分享图、统计脚本
-
-### 第三阶段
-
-- 迁移到 Astro、Next.js 或 Jekyll
-- 加 Markdown 博客能力
-- 加 SEO、RSS、站点地图、搜索
+- 根目录只保留站点运行必要文件
+- 说明性文档统一放在 `docs/`
+- 新增文档先判断归属目录，再创建文件
+- 文件命名统一用小写英文加连字符
 
 ## 本地预览
 
