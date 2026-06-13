@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-const { title = "yyyyang", description = "yyyyang 的个人主页与博客入口。" } =
+const { title = "yyyyang", description = "YYYY 的个人主页与博客入口。" } =
   Astro.props;
 ---
 
@@ -14,20 +14,21 @@ const { title = "yyyyang", description = "yyyyang 的个人主页与博客入口
     <meta name="description" content={description} />
   </head>
   <body>
+    <div class="page-backdrop"></div>
     <div class="site-shell">
-      <header class="hero">
-        <nav class="topbar">
-          <a class="brand" href="/">YYYYANG.CN</a>
-          <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/blog/">Blog</a>
-            <a href="/docs/">Docs</a>
-            <a href="https://github.com/gengafdafd">GitHub</a>
-          </div>
-        </nav>
+      <nav class="topbar topbar-shell">
+        <a class="brand" href="/">YYYYANG.CN</a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/blog/">Blog</a>
+          <a href="/docs/">Docs</a>
+          <a href="https://github.com/gengafdafd">GitHub</a>
+        </div>
+      </nav>
+      <header class="hero hero-shell">
         <slot name="hero" />
       </header>
-      <main>
+      <main class="main-shell">
         <slot />
       </main>
       <footer class="footer">
