@@ -303,6 +303,12 @@ h3 {
   grid-template-columns: 1.2fr 1fr 1fr;
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+}
+
 .card,
 .blog-card {
   border: 1px solid var(--line);
@@ -379,6 +385,11 @@ h3 {
 
 .hero-card-soft {
   background: rgba(255, 255, 255, 0.78);
+}
+
+.hero-card-metric h3 {
+  margin-bottom: 6px;
+  font-size: 1.3rem;
 }
 
 .bullet-list {
@@ -524,6 +535,18 @@ h3 {
   background: rgba(255, 255, 255, 0.88);
 }
 
+.post-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.post-aside {
+  position: sticky;
+  top: 96px;
+}
+
 .update-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -592,10 +615,15 @@ h3 {
   .split-grid,
   .contact-links,
   .overview-grid,
+  .about-grid,
   .metrics-grid,
   .identity-grid,
   .update-strip,
   .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-layout {
     grid-template-columns: 1fr;
   }
 

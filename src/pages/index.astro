@@ -42,6 +42,12 @@ const recentPosts = (await getCollection("blog"))
             <li>文档入口</li>
           </ul>
         </article>
+
+        <article class="hero-card hero-card-metric">
+          <span class="mini-label">Live</span>
+          <h3>www.yyyyang.cn</h3>
+          <p>持续更新中的个人站点。</p>
+        </article>
       </div>
     </div>
   </Fragment>
@@ -83,6 +89,30 @@ const recentPosts = (await getCollection("blog"))
         <p class="quote-mark">Writing</p>
         <h3>博客会成为第二主入口</h3>
         <p>后续文章会覆盖建站记录、工程实践、AI 使用经验和阶段性思考。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel panel-clean">
+    <div class="section-heading">
+      <p class="eyebrow">About Me</p>
+      <h2>把“我是谁”写成真正可读的主页内容。</h2>
+    </div>
+    <div class="about-grid">
+      <article class="card card-large">
+        <p class="quote-mark">Profile</p>
+        <h3>一个在搭建个人表达空间的人</h3>
+        <p>
+          这里不是简单的名片页，也不是纯文档站。它更像一个长期公开窗口，用来整理个人项目、写作、技术实践和阶段性判断。
+        </p>
+        <p>
+          我希望这个站点逐步变成一个清楚、稳定、有内容密度的地方，而不是只有链接和空壳页面。
+        </p>
+      </article>
+      <article class="card">
+        <p class="quote-mark">Interests</p>
+        <h3>关注方向</h3>
+        <p>个人站点建设、工程实践、AI 工具使用、长期内容沉淀。</p>
       </article>
     </div>
   </section>
@@ -200,6 +230,21 @@ const recentPosts = (await getCollection("blog"))
         <span class="tag">Identity</span>
         <h3>个人品牌表达</h3>
         <p>通过统一的 logo、导航、主页和博客，慢慢建立稳定的个人识别方式。</p>
+      </article>
+      <article class="project-card">
+        <span class="tag">Content</span>
+        <h3>内容系统搭建</h3>
+        <p>通过 Astro 内容集合组织文章和文档，让后续写作和展示都变得稳定可维护。</p>
+      </article>
+      <article class="project-card">
+        <span class="tag">Workflow</span>
+        <h3>发布链路整理</h3>
+        <p>清理 GitHub Pages 冲突工作流，统一改为构建产物部署，避免 README 或 404 覆盖站点。</p>
+      </article>
+      <article class="project-card">
+        <span class="tag">Design</span>
+        <h3>视觉与信息秩序</h3>
+        <p>通过导航、卡片、区块和渐变头图，把站点从“可用”推到“有辨识度”。</p>
       </article>
     </div>
   </section>
