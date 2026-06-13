@@ -108,6 +108,30 @@ const recentPosts = (await getCollection("blog"))
     </div>
   </section>
 
+  <section class="panel panel-clean">
+    <div class="section-heading">
+      <p class="eyebrow">Identity</p>
+      <h2>把识别度放到首页，而不是只放在导航条里。</h2>
+    </div>
+    <div class="identity-grid">
+      <article class="identity-card identity-card-strong">
+        <div class="identity-mark">
+          <img src="/logo.svg" alt="yyyyang symbol" />
+        </div>
+        <div>
+          <p class="quote-mark">Brand Mark</p>
+          <h3>YYYYANG.CN</h3>
+          <p>一个面向个人表达、写作沉淀和项目展示的长期站点标识。</p>
+        </div>
+      </article>
+      <article class="identity-card">
+        <p class="quote-mark">Positioning</p>
+        <h3>个人主页 + 博客</h3>
+        <p>主页负责识别和入口，博客负责更新和沉淀，两者共同构成这个站点的主结构。</p>
+      </article>
+    </div>
+  </section>
+
   <section class="panel panel-links">
     <div class="section-heading">
       <p class="eyebrow">Links</p>
@@ -147,6 +171,27 @@ const recentPosts = (await getCollection("blog"))
           </article>
         ))
       }
+    </div>
+  </section>
+
+  <section class="panel panel-ghost">
+    <div class="section-heading">
+      <p class="eyebrow">Latest Update</p>
+      <h2>当前站点正在持续完善中。</h2>
+    </div>
+    <div class="update-strip">
+      <div class="update-item">
+        <span>Visual</span>
+        <strong>主题风格已切到更明亮的品牌站方向</strong>
+      </div>
+      <div class="update-item">
+        <span>Blog</span>
+        <strong>博客已从 Markdown 文件列表升级为真正页面</strong>
+      </div>
+      <div class="update-item">
+        <span>Brand</span>
+        <strong>已加入站点 logo 与统一视觉识别</strong>
+      </div>
     </div>
   </section>
 </BaseLayout>

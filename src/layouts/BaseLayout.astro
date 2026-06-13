@@ -12,12 +12,16 @@ const { title = "yyyyang", description = "YYYY 的个人主页与博客入口。
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
   </head>
   <body>
     <div class="page-backdrop"></div>
     <div class="site-shell">
       <nav class="topbar topbar-shell">
-        <a class="brand" href="/">YYYYANG.CN</a>
+        <a class="brand brand-lockup" href="/">
+          <img src="/logo.svg" alt="yyyyang logo" class="brand-mark" />
+          <span>YYYYANG.CN</span>
+        </a>
         <div class="nav-links">
           <a href="/">Home</a>
           <a href="/blog/">Blog</a>
