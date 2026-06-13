@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>yyyyang</title>
+    <title>yyyyang | Personal Site</title>
     <meta
       name="description"
-      content="yyyyang 的个人站点，用于展示个人介绍、站点目录、项目与文档。"
+      content="yyyyang 的个人主页与文档入口，展示个人介绍、正在做的事、项目和知识沉淀。"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,70 +14,81 @@
     <div class="site-shell">
       <header class="hero">
         <nav class="topbar">
-          <div class="brand">YYYYANG</div>
+          <div class="brand">YYYYANG.CN</div>
           <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#directory">Directory</a>
+            <a href="#intro">Intro</a>
+            <a href="#focus">Focus</a>
+            <a href="#map">Map</a>
             <a href="#docs">Docs</a>
             <a href="https://github.com/gengafdafd">GitHub</a>
           </div>
         </nav>
 
-        <div class="hero-copy">
-          <p class="eyebrow">Personal Site / Knowledge Base</p>
-          <h1>yyyyang 的个人主页与文档入口。</h1>
-          <p class="lead">
-            这里是个人介绍、项目展示和文档沉淀的统一入口。站点结构会保持清晰，新增内容一律按目录归档，避免后续持续变乱。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#directory">查看目录</a>
-            <a class="button button-secondary" href="docs/about/personal-profile.md">个人介绍</a>
+        <div class="hero-grid" id="intro">
+          <div class="hero-copy">
+            <p class="eyebrow">Personal Site / Working Notes</p>
+            <h1>把主页做成长期可维护的个人据点。</h1>
+            <p class="lead">
+              我是 `yyyyang`。这里不是单纯放链接的页面，而是一个持续整理个人介绍、项目、文档和思考的公开入口。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="docs/about/personal-profile.md">查看个人介绍</a>
+              <a class="button button-secondary" href="#map">查看内容地图</a>
+            </div>
           </div>
+
+          <aside class="hero-note">
+            <p class="eyebrow">Current State</p>
+            <h2>先搭骨架，再持续填内容。</h2>
+            <p>
+              当前站点重点是把目录结构、域名配置、文档规范和个人介绍先做稳，后面再补项目展示与文章沉淀。
+            </p>
+          </aside>
         </div>
       </header>
 
       <main>
-        <section class="panel" id="about">
+        <section class="panel" id="focus">
           <div class="section-heading">
-            <p class="eyebrow">About</p>
-            <h2>个人介绍先固定成一个统一版本</h2>
+            <p class="eyebrow">Focus</p>
+            <h2>这不是一张名片，而是一套持续更新的内容结构</h2>
           </div>
           <div class="grid two-up">
             <article class="card">
-              <h3>当前定位</h3>
+              <h3>个人定位</h3>
               <p>
-                yyyyang 正在建设自己的个人主页和文档体系，把项目、记录、写作和对外信息收拢到一个长期可维护的站点里。
+                这里承载个人介绍、项目资料、配置说明和阶段性记录。目标不是做复杂，而是保持清楚、可积累、可长期维护。
               </p>
             </article>
             <article class="card">
               <h3>当前重点</h3>
               <p>
-                先把域名、页面、目录结构、个人介绍和文档规范打稳，再逐步补项目展示和长期内容沉淀。
+                先把自定义域名、页面视觉、目录规则和基础文档定下来，再把项目和写作逐步补进去。
               </p>
             </article>
           </div>
         </section>
 
-        <section class="panel accent" id="directory">
+        <section class="panel accent" id="map">
           <div class="section-heading">
-            <p class="eyebrow">Directory</p>
-            <h2>后续所有内容按这个目录放</h2>
+            <p class="eyebrow">Content Map</p>
+            <h2>以后新增内容都从这里进入，不再散落</h2>
           </div>
           <div class="grid three-up">
             <article class="card feature">
               <span class="tag">01</span>
               <h3>About</h3>
-              <p>个人介绍、定位、联系方式和对外简介，统一放到 `docs/about/`。</p>
+              <p>个人介绍、定位、联系方式和对外简介，统一放在 `docs/about/`。</p>
             </article>
             <article class="card feature">
               <span class="tag">02</span>
               <h3>Guides</h3>
-              <p>配置说明、部署手册、域名与 HTTPS 之类的操作文档，统一放到 `docs/guides/`。</p>
+              <p>配置说明、部署手册、域名与 HTTPS 等操作文档，统一放在 `docs/guides/`。</p>
             </article>
             <article class="card feature">
               <span class="tag">03</span>
               <h3>Plans / Projects / Notes</h3>
-              <p>规划、项目介绍和零散沉淀分别放 `docs/plans/`、`docs/projects/`、`docs/notes/`。</p>
+              <p>规划、项目资料和零散沉淀分别放 `docs/plans/`、`docs/projects/`、`docs/notes/`。</p>
             </article>
           </div>
         </section>
@@ -85,7 +96,7 @@
         <section class="panel" id="docs">
           <div class="section-heading">
             <p class="eyebrow">Docs</p>
-            <h2>先建立标准入口，而不是继续堆文件</h2>
+            <h2>先把标准入口铺好，后续内容按规则进入</h2>
           </div>
           <div class="timeline">
             <article class="timeline-item">
@@ -103,6 +114,27 @@
               <h3><a href="docs/plans/site-roadmap.md">站点建设路线</a></h3>
               <p>用阶段性路线定义站点怎么建设，避免后面随意加页面和文档。</p>
             </article>
+          </div>
+        </section>
+
+        <section class="panel contact-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Links</p>
+            <h2>对外入口保持简单直接</h2>
+          </div>
+          <div class="contact-links">
+            <a class="contact-link" href="https://github.com/gengafdafd">
+              <strong>GitHub</strong>
+              <span>github.com/gengafdafd</span>
+            </a>
+            <a class="contact-link" href="docs/README.md">
+              <strong>Docs</strong>
+              <span>查看文档目录规范</span>
+            </a>
+            <a class="contact-link" href="docs/about/personal-profile.md">
+              <strong>Profile</strong>
+              <span>查看个人介绍模板</span>
+            </a>
           </div>
         </section>
       </main>
