@@ -16,9 +16,10 @@ const recentPosts = (await getCollection("blog"))
     <div class="hero-grid hero-grid-home hero-grid-minimal">
       <div class="hero-copy hero-copy-home hero-copy-minimal">
         <p class="eyebrow">Personal Site / Writing / Projects</p>
-        <h1>简洁一点，留下真正重要的内容。</h1>
+        <div class="intro-pill">Minimal personal site, built for long-term writing</div>
+        <h1>把主页做得更轻一点，但更有判断。</h1>
         <p class="lead lead-wide">
-          yyyyang 的个人主页与博客入口。这里用更克制的方式承载个人介绍、项目、写作和长期积累。
+          yyyyang 的个人主页与博客入口。这里会用更少但更清楚的信息，承载个人介绍、项目、写作和长期积累。
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="/blog/">进入博客</a>
@@ -28,7 +29,7 @@ const recentPosts = (await getCollection("blog"))
 
       <div class="hero-minimal-note">
         <span class="mini-label">Now</span>
-        <p>持续建设个人主页、博客系统与内容结构。</p>
+        <p>持续建设个人主页、博客系统与内容结构，让站点从“能看”变成“值得留下来”。</p>
       </div>
     </div>
   </Fragment>
@@ -47,6 +48,24 @@ const recentPosts = (await getCollection("blog"))
         <span>Domain</span>
         <strong>yyyyang.cn</strong>
       </article>
+    </div>
+  </section>
+
+  <section class="panel panel-clean manifesto-panel">
+    <div class="manifesto-copy">
+      <p class="eyebrow">Manifesto</p>
+      <h2>这个站点不想做成“信息堆积页”，而想做成一个更像人的入口。</h2>
+      <p>
+        首页负责表达立场和入口，博客负责持续写作，项目和文档作为补充存在。每一块都只做自己该做的那件事。
+      </p>
+    </div>
+    <div class="manifesto-aside">
+      <span class="mini-label">Focus</span>
+      <ul class="bullet-list">
+        <li>更清楚的个人表达</li>
+        <li>更稳定的内容结构</li>
+        <li>更长期的写作沉淀</li>
+      </ul>
     </div>
   </section>
 
@@ -71,6 +90,32 @@ const recentPosts = (await getCollection("blog"))
     </div>
   </section>
 
+  <section class="panel panel-clean">
+    <div class="section-heading">
+      <p class="eyebrow">Selected Notes</p>
+      <h2>最近写的内容，应该直接成为首页的一部分。</h2>
+    </div>
+    <div class="notes-list">
+      {
+        recentPosts.map((post, index) => (
+          <article class={`note-row ${index === 0 ? "note-row-feature" : ""}`}>
+            <div class="note-meta">
+              <span>{post.data.pubDate.toISOString().slice(0, 10)}</span>
+              <span class="chip">{index === 0 ? "Featured" : "Latest"}</span>
+            </div>
+            <div class="note-body">
+              <h3>
+                <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+              </h3>
+              <p>{post.data.description}</p>
+            </div>
+            <a class="text-link" href={`/blog/${post.id}/`}>阅读全文</a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
   <section class="panel panel-links">
     <div class="section-heading">
       <p class="eyebrow">Links</p>
@@ -92,37 +137,10 @@ const recentPosts = (await getCollection("blog"))
     </div>
   </section>
 
-  <section class="panel panel-clean">
-    <div class="section-heading">
-      <p class="eyebrow">Recent Writing</p>
-      <h2>最近更新</h2>
-    </div>
-    <div class="blog-feed">
-      {
-        recentPosts.map((post, index) => (
-          <article class={`blog-card blog-card-feature ${index === 0 ? "blog-card-primary" : ""}`}>
-            <div class="blog-cover">
-              <span class="chip">Writing</span>
-            </div>
-            <p class="meta">{post.data.pubDate.toISOString().slice(0, 10)}</p>
-            <h3>
-              <a href={`/blog/${post.id}/`}>{post.data.title}</a>
-            </h3>
-            <p>{post.data.description}</p>
-            <div class="blog-card-footer">
-              <span class="chip">Latest</span>
-              <a class="text-link" href={`/blog/${post.id}/`}>阅读全文</a>
-            </div>
-          </article>
-        ))
-      }
-    </div>
-  </section>
-
   <section class="panel accent">
     <div class="section-heading">
       <p class="eyebrow">Projects</p>
-      <h2>几个当前正在建设的方向。</h2>
+      <h2>几个正在推进的方向，而不是一串空名字。</h2>
     </div>
     <div class="projects-grid">
       <article class="project-card">
@@ -161,7 +179,7 @@ const recentPosts = (await getCollection("blog"))
   <section class="panel panel-ghost">
     <div class="section-heading">
       <p class="eyebrow">Latest Update</p>
-      <h2>当前站点正在持续完善中。</h2>
+      <h2>当前站点仍在演化，但已经从仓库页变成了真正的站点。</h2>
     </div>
     <div class="update-strip">
       <div class="update-item">
